@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storageAccounts_sammreenamir_name": {
+      "value": null
+    },
+    "databaseAccounts_sammreen_name": {  
+    },
+    "sites_sammreen_name": {
+      "value": null
+    },
+    "serverfarms_ASP_sammreen_externalid": { 
+      "value": null
+    }
+  }
+}
