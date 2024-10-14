@@ -8,10 +8,10 @@ import os
 load_dotenv()
 
 # Initialize the Cosmos DB client
-cosmos_endpoint = os.getenv('COSMOS_ENDPOINT')  # Load from .env
-cosmos_key = os.getenv('COSMOS_KEY')  # Load from .env
-database_name = os.getenv('DATABASE_NAME')  # Load from .env
-container_name = os.getenv('CONTAINER_NAME')  # Load from .env
+cosmos_endpoint = os.getenv('COSMOS_ENDPOINT')  
+cosmos_key = os.getenv('COSMOS_KEY')  
+database_name = os.getenv('DATABASE_NAME')  
+container_name = os.getenv('CONTAINER_NAME') 
 
 # Create a Cosmos DB client
 client = CosmosClient(cosmos_endpoint, cosmos_key)

@@ -27,6 +27,7 @@ def mock_environment_variables():
     with patch.dict(os.environ, {
         "COSMOS_DB_ENDPOINT": "https://your-cosmos-db-endpoint",
         "COSMOS_DB_KEY": "your-cosmos-db-key"
+
     }):
         yield
 
