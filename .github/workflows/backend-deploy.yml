@@ -25,8 +25,14 @@ jobs:
 
     - name: Set environment variables
       run: |
-        echo "COSMOS_DB_ENDPOINT=${{ secrets.COSMOS_ENDPOINT }}" >> $GITHUB_ENV
-        echo "COSMOS_DB_KEY=${{ secrets.COSMOS_KEY }}" >> $GITHUB_ENV
+        echo "COSMOS_ENDPOINT=${{ secrets.COSMOS_ENDPOINT }}" >> $GITHUB_ENV
+        echo "COSMOS_KEY=${{ secrets.COSMOS_KEY }}" >> $GITHUB_ENV
+
+    # Optional step to debug: Print the environment variables (remove this step in production)
+    - name: Show environment variables
+      run: |
+        echo "COSMOS_ENDPOINT: $COSMOS_ENDPOINT"
+        echo "COSMOS_KEY: $COSMOS_KEY"
 
     - name: Run tests
       run: |
@@ -41,4 +47,3 @@ jobs:
     - name: Deploy ARM Template
       run: |
         az deployment group create --resource-group classsamreen --template-file Infrastructure/merged_template.json --parameters Infrastructure/merged_parameters.json
-
